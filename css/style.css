@@ -1,0 +1,1351 @@
+body{
+	margin: 0px;
+	width: 100%;
+}
+
+/*reset ustawien buttoow*/
+button/*, input[type="submit"], input[type="reset"]*/ {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+#hf_upper_banner{
+	background-color: #125a4c;
+	height: 35px;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hf_small_text{
+	color: white;
+	font-size: 11px;
+	font-family: "Tofino", sans-serif;
+	display: block;
+}
+
+.hf_header{
+	height: 60px;
+	width: 100%;
+	padding: 10px;
+}
+
+.hf_nav{
+	width: 100%;
+}
+
+.hf_nav .hf_nav_icon{
+	font-size: 16px;
+}
+
+.hf_nav .hf_nav_title{
+	font-size: 18px;
+	font-weight: bold;
+	padding: 0px;
+}
+
+.hf_nav ol{
+    display: inline-flex;
+    align-items: center;
+    width: calc(100% - 30px);
+    justify-content: flex-end;
+    list-style-type: none;
+	height: 35px;
+	padding-left: 30px;
+	cursor: pointer;
+}
+
+
+.hf_nav ol li{
+	width: 20%;
+	align-self: flex-start;
+}
+
+.hf_nav > ol > li:nth-child(2){
+	width: 25%;
+}
+
+.hf_nav > ol > li:nth-child(4){
+	color: orange;
+	margin-right: 25%;
+}
+
+.hf_nav > ol > li > ul{
+	list-style-type: none;
+	/*padding-left: 10px;*/
+	padding: 0px;
+	display: none;
+	background-color: #faf9f5;
+	z-index: 2;
+	position: relative;
+}
+
+.hf_nav > ol > li:hover > ul{
+	display: block;
+}
+
+.hf_nav a{
+	color: black;
+	text-decoration: none;
+	padding-left: 10px;
+}
+
+.hf_nav ol li ul li{
+	width: 100%;
+	padding: 12px 0px 12px 0px;
+}
+
+.hf_nav > ol > li > ul > li:hover:not(.hf_submenu){
+	background-color: #94938f;
+	cursor: pointer;
+}
+
+.hf_nav .hf_nav_title:hover{
+	background-color: #e4e4e4;
+}
+
+.hf_nav ol > li > ul > li.hf_submenu > ul > li:hover{
+	background-color: #e4e4e4;
+}
+
+.hf_nav > ol > li > ul > li > ul{
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.hf_nav ol > li > ul > li.hf_submenu > ul > li > a{
+	padding-left: 20px;
+} 
+
+
+.hf_logo_search_banner{
+	padding: 30px 2%;
+	display: inline-flex;
+	width: 96%;
+}
+
+.hf_logo_search_banner .hf_main_logo{
+	width: auto;
+	height: auto;
+	padding: 1px 30px 0px 0px;
+}
+
+.hf_logo_search_banner .hf_search{
+	width: 60%;
+	position: relative;
+}
+
+.hf_logo_search_banner .hf_search #hf_input_search{
+	width: 80%;
+	height:40px;
+	padding: 0 0 0 40px;
+	border: 1px solid gray;
+	border-radius: 3px;
+}
+
+.hf_logo_search_banner .hf_search_icon{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	font-size: 30px!important;
+}
+
+.hf_logo_search_banner input:hover,
+.hf_logo_search_banner input:focus-visible{
+	outline: unset;
+}
+
+.hf_logo_search_banner .hf_search_icons{
+	width: 25%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.hf_logo_search_banner .hf_s_icon{
+	padding: 0px 10px;
+	font-size: 30px!important;
+}
+
+.hf_loop{
+	display: none!important;
+}
+
+.hf_schopping{
+	padding-right: 20px!important;
+	position: relative;
+	cursor: pointer;
+}
+
+.hf_schopping .hf_container{
+	position: absolute;
+	right: 17px;
+	bottom: -5px;
+	padding: 15px 5px 0px 12px;
+}
+
+#hf_shop_count{
+	font-size: 14px;
+	background-color: orange;
+	border-radius: 100%;
+	padding: 2px;
+	font-weight: bold;
+	font-family: sans-serif;
+	font-style: normal;
+}
+
+#hf_shop_list{
+	position: absolute;
+	left: -302px;
+	top: 46px;
+	border: 1px solid black;
+	font-size: 10px;
+	padding: 10px;
+	width: 350px;
+	background-color: lightgray;
+	border-radius: 10px;
+	display: none;
+	z-index: 100;
+	line-height: 16px;
+}
+
+#checkmark{
+	display: inline-block;
+	width: 24px;
+	height: 22px;
+	background-color: #2ecc71;
+	border-radius: 50%;
+	transform: rotate(45deg);
+}
+
+#checkmark:before{
+	content:"";
+    position: absolute;
+    width:3px;
+    height:9px;
+    background-color:#fff;
+    left:11px;
+    top:6px;
+}
+
+#checkmark:after{
+    content:"";
+    position: absolute;
+    width: 3px;
+    height:3px;
+    background-color:#fff;
+    left:8px;
+    top:12px;
+}
+
+#hf_shop_list .hf_shop_title{
+	font-weight: bold;
+	margin-bottom: 15px;
+	display: block;
+	width: 50%;
+	font-size: 11px;
+	padding-top: 3px;
+	padding-left: 3px;
+}
+
+#hf_shop_list .hf_shop_product{
+	padding: 5px 0px;
+	display: flex;
+}
+
+.hf_shop_header{
+	display: inline-flex;
+	width: 100%;
+}
+
+.hf_shop_x{
+	width: 50%;
+	align-items: flex-start;
+	display: flex!important;
+	justify-content: flex-end;
+}
+
+.hf_shop_sum{
+	display: block;
+}
+
+.hf_delete{
+	font-size: 18px!important;
+	padding-right: 6px;
+}
+
+#Checkout{
+	color: #2ecc71;
+}
+
+.hf_main_logo{
+	display: inline-flex;
+	height: 111px;
+	width: 111px;
+	left: 0px;
+}
+/*Potrzebuje pomocy z tym logiem bo coś dalej mam nie tak */
+.hf_main_logo img {
+    height: 30px;
+	padding-top: 4px;
+}
+
+.hf_main_products img{
+	display: block;
+	max-width: 250px;
+	max-height: 250px;
+	width: auto;
+	height: 100%;
+}
+
+#reamaze-widget-icon img {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	opacity: 1;
+	display: inline-block;
+}
+
+#copyright_content {
+	font-size: 10px;
+	text-align: center;
+}
+/* 
+ .stamped{
+	padding: 0px 10px;
+	font-size: 30px!important;
+}
+??? JAK to zmieniać wiem że było wcześniej ale nie ogarniam???
+*/
+.fa {
+	font-size: 16px ;
+	padding: 13px;
+	text-align:center;
+	text-decoration: none;
+	color: black;
+}
+
+.footer_block-newsletter a{
+	text-decoration: none;
+	font-size: 17px;
+	position: relative;
+	bottom: 6px;
+}
+
+.footer_list-social-media{
+	display: inline-flex;
+	width: 20%;
+	justify-content: space-around;
+	align-items: center;
+	margin-left: 40%;
+}
+
+.img_pinterest img{
+	width: 16px;
+}
+
+.hf_icon_bottom{
+	border: none;
+	background-color: #125a4c;
+	border-radius: 30px;
+	height: 40px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	position: fixed;
+	bottom: 20px;
+}
+
+.hf_icon_bottom_left{
+	left: 20px;
+	width: 120px;
+}
+
+.hf_icon_bottom_right{
+	right: 20px;
+	width: 40px;
+}
+
+.hf_icon_bottom:hover{
+	cursor: pointer;
+}
+
+/*.hf_icon_bottom_right:hover{
+	opacity : 0.50;
+	filter : alpha(opacity=50);
+}*/
+
+.star{
+	font-size: 15px!important;
+	margin-right: 5px;
+}
+
+/*.hf_slider{
+	background: lightblue url("test.png") no-repeat fixed center; 
+}*/
+
+.hf_slider_img{
+	width: 100%;
+	background-image: url('../img/tlo.webp');
+	height: 600px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.hf_slider{
+	position: relative;
+}
+
+.hf_text{
+    width: 30%;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    color: white;
+    font-weight: bold;
+    display: block;
+    align-items: center;
+}
+
+.hf_text1,
+.hf_text2,
+.hf_text_button{
+	display: block;
+}
+
+.hf_text_button{
+	background-color:#f25c08;
+	color: #fff;
+	border-radius: 30px;
+	height: 45px;
+	width: 200px;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	border: none;
+	cursor: pointer;
+	margin-top: 15px;
+}
+
+.hf_text1{
+	font-size: 30px;
+}
+
+.hf_text2{
+	font-size: 22px;
+	margin: 15px 0px;
+}
+
+.footer_blocks-wrapper{
+	display: inline-flex;
+	width: 80%;
+	justify-content: space-around;
+	margin-left: 10%;
+}
+
+.footer_block:first-child{
+	width: 40%;
+}
+
+.footer_block{
+	width: 25%;
+}
+
+
+.hf_main_products{
+	width: 80%;
+	display: inline-flex;
+	margin: 40px 10% 10px 10%;
+}
+
+.hf_products{
+	width: 100%;
+	max-height: 500px;
+}
+
+.hf_product_img{
+	width: 98%;
+}
+
+.hf_product_text{
+	padding: 15px;
+	font-size: 20px;
+	color: black;
+}
+
+.hf_product_text:hover .hf_product_text_title{
+	color: blue;
+}
+
+.hf_product_text_title{
+	text-decoration: none;
+	color: black;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.arrow-right{
+	margin-left: 8px;
+	font-size: 20px;
+}
+
+.hf_card_left{
+	min-width: 300px;
+	padding-right: 40px;
+	max-width: 340px;
+	width: 300px;
+	margin-top: 93px;
+}
+
+.hf_card_right{
+	width: 80%;
+	display: inline-flex;
+}
+
+.hf_card_link{
+	display: block;
+	margin-top: 25px;
+}
+
+/*.hf_slider{
+	width: 100%;
+	height: 500px;
+	background-image: url(...img/tlo.webp);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+Nie zadziałało obraz znika
+*/
+
+.hf_product_img_a{
+	height: 100%;
+}
+
+.hf_card_img{
+  width: 90%;
+  height: 40px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/*
+.hf_card:nth-child(1) .hf_card_img{
+  background-image: url('../img/focal/callestee/Celestee_front.jpg')!important;
+  position: relative;
+}
+
+.hf_card:nth-child(1) .hf_card_img:hover:after{
+	background-image: url('../img/focal/callestee/Celestee_front_cable.jpg');
+	z-index: 1000;
+}
+
+.hf_card:nth-child(2) .hf_card_img{
+	background-image: url('../img/dan_clark/aeon-noire.jpg');
+}
+
+
+.hf_card:nth-child(3) .hf_card_img{
+	background-image: url('../img/64audio/u18s/U18-front-cable.png');
+}
+
+.hf_card:nth-child(4) .hf_card_img{
+	background-image: url('../img/final_audio/Final_Audio_D8000_pro_edition_front.jpeg');
+}
+
+.hf_card:nth-child(5) .hf_card_img{
+	background-image: url('../img/audeze/audeze-lcd-2-caribbean-rosewood.jpeg');
+}
+
+.hf_card:nth-child(6) .hf_card_img{
+	background-image: url('../img/empire_ears/legend_evo/LegEvo-front-cable.jpeg');
+}
+
+.hf_card:nth-child(7) .hf_card_img{
+	background-image: url('../img/focal/Utopia/FocalUtopia_side.jpeg');
+  }
+
+.hf_card:nth-child(8) .hf_card_img{
+	background-image: url('../img/empire_ears/odin/Odin-front-cable.jpeg');
+  }
+ */
+/*.hf_card:hover .hf_card_img{
+	transform: scale(1.2);
+	transition: all .5s;
+}*/
+
+.hf_card_product{
+	width: 25%;
+}
+
+.hf_card_subtitle{
+	font-style: italic;
+}
+
+.hf_card_link{
+	color: black;
+	text-decoration-color: orange;
+}
+
+.hf_card_brand{
+	margin-top: 10px;
+	display: block;
+	font-size: 12px;
+	font-weight: lighter;
+}
+
+.hf_card.hf_card_product .hf_card_link.hf_card_product_link{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+.hf_product_price2{
+	text-decoration: line-through;
+	margin: 0 0 0 5px;
+}
+
+.img_pinterest img{
+	height: auto;
+}
+
+.hf_footer_partners{
+	border-top: 1px solid lightgray;
+}
+
+.hf_pagination{
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+	margin-bottom: 80px;
+}
+
+.footer{
+	border-top: 1px solid lightgray;
+}
+
+.footer .footer_container ol.footer_block_list{
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+.footer .footer_container ol.footer_block_list a{
+	padding-left: 0px;
+	color: gray;
+	line-height: 25px;
+	text-decoration: none;
+}
+
+#email{
+	margin-top: 20px;
+	height: 35px;
+	width: 60%;
+	border-radius: 5px;
+	padding: 5px 5px 5px 15px;
+	text-decoration: none;
+	border: 1px solid gray;
+}
+
+.hf_card_bubble{
+	position: absolute;
+	bottom: 0px;
+	display: block;
+	padding: 2px 15px;
+	border-radius: 10px;
+	font-size: 12px;
+}
+
+.hf_add_to_shop{
+	right: 0px;
+	background-color: orange;
+	font-weight: bold;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.hf_green{
+	background-color: lightgreen;
+	left: 0px;
+}
+
+.hf_card_img .hf_add_icon{
+	font-size: 22px;
+	right: 40px;
+	bottom: -1px;
+	background-color: orange;
+	/*font-weight: bold;*/
+	cursor: pointer;
+	position: absolute;
+	border-radius: 10px;
+	padding: 2.6px 9.7px;
+}
+
+/*#hf_chat_container{}*/
+
+#orders_card{
+	display: block;
+}
+
+#hf_chat_region{
+	width: 300px;
+	border: 1px solid black;
+	border-radius: 15px;
+	position: absolute;
+	right: 15px;
+	bottom: 30px;
+}
+
+.hf_chat_subregion{
+	text-align: center;
+	font-size: 4px;
+	color: black;
+}
+
+div > img{
+	max-height: 50px;
+	max-width: 150px;
+}
+
+.logo{
+	position: relative;
+	bottom: 22px;
+	height: 30px;
+}
+
+.hf_search_icon2,
+.hf_chat_title{
+	background:linear-gradient(135deg, rgb(10, 117, 95) 0%, rgb(135, 209, 192) 100%);
+}
+
+
+.hf_chat_title{
+	/*background-color: #125a4c;*/
+	background: linear-gradient(135deg, rgb(10, 117, 95) 0%, rgb(135, 209, 192) 100%);
+	border-radius: 15px 15px 15px 15px;
+	padding: 25px 0px;
+	cursor: default;
+}
+
+.hf_chat_title_1{
+height: 10px;
+}
+
+.hf_chat_body_1{
+	width: 94%;
+	height:115px;
+	margin: auto;
+	background-color: lightgray;
+	border-radius: 15px;
+	text-align: left;
+}
+
+
+
+.hf_chat_body_1_text{
+	display: block;
+	font-size: 16px;
+	padding: 0px 20px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	color:#787979;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: sans-serif;
+}
+
+.hf_chat_body_1_text2{
+	display: block;
+	font-size: 16px;
+	padding: 0px 20px;
+}
+
+#test2{
+	display: none;
+}
+
+#fname{
+	width: 90%;
+	border-radius: 9px;
+	border: 1px;
+	margin-left: 7px;
+}
+
+.hf_chat_button{
+	background: linear-gradient(135deg, rgb(10, 117, 95) 0%, rgb(135, 209, 192) 100%);
+	border-radius: 15px;
+	color:#fff;
+	padding: 6px 25px;
+	line-height: 17px;
+	font-size: 14px;
+	margin-top:10px;
+	margin-left: 23px;
+	margin-bottom: 6px;
+}
+
+.hf_chat_button:hover {
+	transform: translate3d(0, -3px, 0);
+	background: linear-gradient(135deg, rgb(10, 117, 95) 0%, rgb(135, 209, 192) 100%);
+	border: none;
+	color:#fff;
+}
+
+.hf_back_button{
+color: rgb(66,163,180);
+font-size: 17px;
+padding-left: 20px;
+position: relative;
+left: 88px;
+bottom: 37px;
+}
+
+.hf_back_button:hover{
+	background: none;
+	text-decoration: solid;
+
+}
+
+.hf_search_icon2{
+	background: linear-gradient(135deg, rgb(10, 117, 95) 0%, rgb(135, 209, 192) 100%);
+	border-radius: 15px;
+	color: #fff;
+	padding: 6px 25px;
+	line-height: 17px;
+	size: 14px;
+	margin-top: 10px;
+	margin-left: 23px;
+	margin-bottom: 10px
+}
+
+
+
+#hf_rewards_region{
+	width:340px;
+	border: 1px solid black;
+	border-radius: 15px;
+	/*position: absolute;
+	left: 4px;
+	bottom: 44px;*/
+	background-color: #f3f7f6;
+	position: relative;
+	left: 128px;
+	bottom:95px;
+}
+
+
+#hf_rewards_region:hover{
+	cursor: default;
+}
+
+
+.hf_rewards_tittle{
+text-transform: uppercase;
+white-space: nowrap;
+color: #121212;
+font-family: sans-serif;
+}
+
+.hf_rewards_subtittle{
+	color: #121212;
+	text-align: initial;
+}
+
+#hf_rewards {
+color:#125a4c ;
+}
+
+
+
+
+
+
+
+
+
+/*media screen - tryb responsywny*/
+@media screen and (max-width: 460px){  /*0 - 460*/
+
+	.hf_main_logo{
+		display: flex;
+		justify-content: start;
+		padding: unset!important;
+	}
+
+	.hf_main_products{
+		display: block!important;
+	}
+
+	.hf_main_products img{
+		display: none;
+	}
+
+	.hf_main_products.hf_card_main_cards{
+		display: inline-block!important;
+	}/*jakos cos robie zle, moze dalem to na zlym elemencie*/
+
+	.hf_product_text {
+		border-style: solid;
+		border-radius: 10px;
+		border-color: #B5B5B5;
+		border-width: 1px;
+	}	
+	
+	.hf_product_img_a{
+		padding: 8px;	
+	}
+	
+	.hf_card.hf_card_product{
+		width: 100%;
+	}
+	
+	.arrow-right{
+		font-size: 19px!important;
+	}
+	
+	.footer_blocks-wrapper{
+		display: block;
+		width: 80%;
+	}
+	
+	.footer_block.grid_item.footer_block--menu{
+		width: 100%;
+	}
+	
+	.footer_block_heading{
+		text-align: center;
+	}
+	
+	.footer .footer_container ol.footer_block_list {
+		text-align: center;
+	}
+	
+	.footer_list-social-media{
+		width: 40%;
+		margin-left: 20%;
+	}
+	
+	#email{
+		width: 80%;
+	}
+	
+	h2.footer_block_heading{
+		font-size: 19px;
+	}
+	
+	.hf_text{
+		width: 80%;
+		left: 50px;
+	}
+	
+	.hf_text1{
+		font-size: 25px;
+	}
+	
+	.hf_text2{
+		font-size: 20px;
+		text-align: justify;
+	}
+	
+	.hf_text_button{
+		width: 150px;
+		height: 35px;
+		font-size: 16px;
+	}
+	
+	
+	.hf_logo_search_banner{
+		display: block;
+		position: relative;
+		padding-bottom: 20px;
+	}
+	
+	.hf_nav {
+		display: none;
+	}
+	
+	.hf_search{
+		width: 100%!important;
+		margin: 15px 0px;
+	}
+	
+	#hf_input_search{
+		width: 100%!important;
+		display: none;
+	}
+	
+	.hf_search_icons{
+		position: absolute;
+		right: 0px;
+		top: 33px;
+		width: 20%;
+	}
+	
+	.hf_loop{
+		display: inline-block!important;
+	}
+	
+	.hf_logo_search_banner .hf_s_icon {
+		padding: 0px 2px;
+	}
+	
+	.hf_logo_search_banner .hf_search_icon{
+		display: none;
+	}
+	
+	.hf_card_left{
+		width: 100%;
+		max-width: unset;
+		text-align: center;
+		padding-right: 0px;
+	}
+	
+	.hf_card_right{
+		max-width: unset;
+		text-align: center;
+		padding-right: 0px;
+		width: 90%;
+		padding-left: 40px
+	}
+}
+
+/*Ważne jak ustalam rozdzialeczosci to rozumiem nie moge zaczac od 460px, bo poprzednia sie konczy na tym, jak to zaczne na 461 to jak w przegladarce to 461 jest zepsuta(nie maja na nia wplwy moje zapisy dopiero od 462 widze zmiany. Dlaczego jak powinieniem podejsc do wybiernia rozdzelczosci???*/
+@media only screen and (min-width: 461px) and (max-width: 640px){
+	
+	.hf_main_logo{
+		display: flex;
+		justify-content: start;
+		padding: unset;
+	}
+
+	.hf_main_products{
+		display: block;
+	}
+
+	.hf_main_products img{
+		display: none;
+	}
+
+	.hf_main_products.hf_card_main_cards{
+		display: inline-block;
+	}
+
+	.hf_product_text{
+		border-style: solid;
+		border-radius: 10px;
+		border-color: #B5B5B5;
+		border-width: 1px;
+	}
+
+	.hf_product_img_a{
+		padding: 8px;	
+	}
+
+	.hf_card.hf_card_product{
+		width:100%;
+	}
+
+	.hf_search_icons {
+		position: absolute;
+		right: 0px;
+		top: 70px;
+	}
+
+	.hf_logo_search_banner .hf_s_icon {
+		padding: 0px 2px;
+	}
+
+	.hf_product_img{
+		display: none;
+	}
+
+	.hf_logo_search_banner{
+		display: block;
+		position: relative;
+		padding-bottom: 20px;
+	}
+
+	.hf_logo_search_banner .hf_s_icon {
+		padding: 0px 2px;
+		font-size: 30px !important;
+	}
+
+	.hf_logo_search_banner .hf_search_icon{
+		display: none;
+	}
+	.footer_blocks-wrapper {
+		display: block;
+		width: 80%;
+	}
+
+	.footer_block.grid_item.footer_block--menu{
+		width: 100%;
+	}
+	
+	.hf_search{
+		width: 100%!important;
+		margin: 15px 0px;
+	}
+	
+	#hf_input_search{
+		width: 100%!important;
+		display: none;
+	}
+	
+	.hf_search_icons{
+		position: absolute;
+		right: 0px;
+		top: 33px;
+		width: 20%;
+	}
+
+	.hf_text{
+	width: 80%;
+	left: 50px;
+	}
+
+	.hf_text1{
+	font-size: 25px;
+	}
+	
+	.hf_text2{
+		font-size: 21px;
+		text-align: justify;
+	}
+
+	.hf_nav{
+		display: none;
+	}
+
+	.hf_text_button{
+		width: 173px;;
+		height:45px;
+		font-size:19px;
+	}
+
+	.footer_block_heading {
+		text-align: center;
+	}
+
+	.footer .footer_container ol.footer_block_list {
+		text-align: center;
+	}
+
+	.footer_list-social-media{
+		width: 40%;
+		margin-left: 20%;
+	}
+	
+	#email{
+		width: 80%;
+	}
+	
+	h2.footer_block_heading{
+		font-size: 19px;
+	}
+
+	.hf_loop{
+		display: inline-block!important;
+	}
+}
+
+@media only screen and (min-width: 640px) and (max-width: 860px){
+	.hf_main_logo{
+		display: flex;
+		justify-content: start;
+		padding: unset;
+	}
+
+	.hf_main_products{
+		display: block;
+	}
+
+	.hf_main_products img{
+		display: none;
+	}
+
+	.hf_main_products.hf_card_main_cards{
+		display: inline-block;
+	}
+
+	.hf_product_text{
+		border-style: solid;
+		border-radius: 10px;
+		border-color: #B5B5B5;
+		border-width: 1px;
+	}
+
+	.hf_product_img_a{
+		padding: 8px;	
+	}
+
+	.hf_card.hf_card_product{
+		width:100%;
+	}
+
+	.hf_search_icons {
+		position: absolute;
+		right: 0px;
+		top: 70px;
+	}
+
+	.hf_logo_search_banner .hf_s_icon {
+		padding: 0px 2px;
+	}
+
+	.hf_product_img{
+		display: none;
+	}
+
+	.hf_logo_search_banner{
+		display: block;
+		position: relative;
+		padding-bottom: 20px;
+	}
+
+	.hf_logo_search_banner .hf_s_icon {
+		padding: 0px 2px;
+		font-size: 30px !important;
+	}
+
+	.hf_logo_search_banner .hf_search_icon{
+		display: none;
+	}
+	.footer_blocks-wrapper {
+		display: block;
+		width: 80%;
+	}
+
+	.footer_block.grid_item.footer_block--menu{
+		width: 100%;
+	}
+	
+	.hf_search{
+		width: 100%!important;
+		margin: 15px 0px;
+	}
+	
+	#hf_input_search{
+		width: 100%!important;
+		display: none;
+	}
+	
+	.hf_search_icons{
+		position: absolute;
+		right: 0px;
+		top: 33px;
+		width: 20%;
+	}
+
+	.hf_text{
+	width: 80%;
+	left: 50px;
+	}
+
+	.hf_text1{
+	font-size: 35px;
+	}
+	
+	.hf_text2{
+		font-size: 28px;
+		text-align: justify;
+	}
+
+	.hf_nav{
+		display: none;
+	}
+
+	.hf_text_button{
+		width: 185px;
+		height: 46px;
+		font-size: 21px;
+	}
+
+	.footer_block_heading {
+		text-align: center;
+	}
+
+	.footer .footer_container ol.footer_block_list {
+		text-align: center;
+	}
+
+	.footer_list-social-media{
+		width: 40%;
+		margin-left: 20%;
+	}
+	
+	#email{
+		width: 80%;
+	}
+	
+	h2.footer_block_heading{
+		font-size: 19px;
+	}
+
+	.hf_loop{
+		display: inline-block!important;
+	}
+	.hf_text2{
+		font-variation-settings: "wdth" 570;
+	}
+	#email {
+	width: 60%;
+	}
+}
+
+@media only screen and (min-width: 860px) and (max-width: 1200px){
+	.hf_card_left {
+		min-width: 216px;
+		padding-right: 0px;
+		width: 55px;
+		margin-top: 82px;
+	  }
+	  /*.hf_main_products .hf_main_products.hf_card_main_cards{
+		Jak mam poszezyc szerokosc tego paska
+	  }*/
+	  .hf_nav {
+		display: none;
+	}
+	#hf_input_search{
+		width: 100%!important;
+	}
+	.hf_logo_search_banner .hf_search #hf_input_search {
+		width: 80%;
+		height: 40px;
+		padding: 0 0 0 40px;
+		border: 1px solid gray;
+		border-radius: 3px;
+	  }
+	.hf_logo_search_banner .hf_search_icon{
+		position: absolute;
+		padding: 0px 12px;
+		left: -9px;
+		font-size: 31px !important;
+		top: 4px;
+	}
+	.hf_logo_search_banner .hf_s_icon{
+		padding: 0px 3px;
+	}
+	.hf_text2{
+		text-align: justify;/*cos innego nie pasuje to psuje tekst*/
+	}
+}
+	
+@media only screen and (min-width: 1200) and (max-width: 1600px){
+	.hf_text2{
+		text-align: justify;/*cos innego nie pasuje to psuje tekst*/
+		}
+}
+
+
